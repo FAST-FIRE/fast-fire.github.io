@@ -150,6 +150,18 @@ body {
   border-radius: 5px;
 }
 
+/* Add by xinweicc */
 .spacer {
   height: 2rem;
+}
+
+.main-title {
+  background-color: #569fe2;
+  color: white;
+  padding: 4rem;
+  width: 140%;
+  margin-left: calc(-20%);
+  border-radius: 0.25rem;
+  text-align: center;
+  box-sizing: border-box;
 }
