@@ -1,11 +1,5 @@
-<!-- Template: https://github.com/nerfies/nerfies.github.io -->
-<!-- Author: Xinwei Chen, contact: xinweichen@zju.edu.cn -->
-<!-- Latest update time: 2024-07-23 10:19:06 -->
-<!-- Way to find CSS using: view index.html in browser and press F12 -->
-
 <!DOCTYPE html>
 <html>
-<!-- web head -->
 
 <head>
   <meta charset="utf-8">
@@ -20,11 +14,28 @@
   <!-- Icon库 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- 动画效果 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
-<!--  web body  -->
-
 <body>
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-end">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#multi-robot">
+          <b>Multi-robot Systems</b>
+        </a>
+        <a class="navbar-item" href="#novel-platforms">
+          <b>Novel Robot Platforms</b>
+        </a>
+        <a class="navbar-item" href="#autonomous-navigation">
+          <b>Autonomous Navigation</b>
+        </a>
+      </div>
+    </div>
+  </nav>
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -40,7 +51,7 @@
   <main class="section">
     <div class="container">
       <!-- Multi-robot Systems -->
-      <section class="category">
+      <section class="category animate__animated animate__fadeIn" id="multi-robot">
         <h2 class="title is-3">Multi-robot Systems</h2>
         <div class="columns is-multiline">
           <div class="column is-one-two">
@@ -73,7 +84,7 @@
       <div class="spacer"></div>
 
       <!-- Novel Robot Platforms -->
-      <section class="category">
+      <section class="category animate__animated animate__fadeIn" id="novel-platforms">
         <h2 class="title is-3">Novel Robot Platforms</h2>
         <div class="columns is-multiline">
           <div class="column is-one-two">
@@ -83,8 +94,8 @@
                   <img src="static/images/RoFly.png" alt="RoFly">
                 </figure>
                 <div class="spacer"></div>
-                <h3 class="title is-4">Rofly(优飞)空地双模移动机器人</h3>
-                <p>Rofly(优飞)空地双模移动机器人，能滚能飞、卫星拒止、持久续航。</p>
+                <h3 class="title is-4">RoFly(优飞)空地双模移动机器人</h3>
+                <p>RoFly(优飞)空地双模移动机器人，能滚能飞、卫星拒止、持久续航。</p>
               </div>
             </a>
           </div>
@@ -106,7 +117,7 @@
       <div class="spacer"></div>
 
       <!-- Autonomous Navigation -->
-      <section class="category">
+      <section class="category animate__animated animate__fadeIn" id="autonomous-navigation">
         <h2 class="title is-3">Autonomous Navigation</h2>
         <div class="columns is-multiline">
           <div class="column is-one-two">
@@ -122,7 +133,7 @@
             </a>
           </div>
           <div class="column is-one-two">
-            <!-- to be release -->
+            <!-- to be released -->
           </div>
         </div>
       </section>
@@ -170,49 +181,40 @@
       </div>
       <!-- contact -->
       <div class="columns is-centered">
-        <div class="column has-background-link-light is-4">
-          <div class="content">
-            <h4>
-              邮箱:
-              <a rel="license" href="mailto:yanjunhi@zju.edu.cn">
-                yanjunhi@zju.edu.cn
-              </a>
-            </h4>
-          </div>
-        </div>
-        <div class="column has-background-link-light is-6">
-          <div class="content">
-            <h4>
-              地址:
-              <a rel="license" href="https://ditu.amap.com/place/B0G257WTA3">
-                浙江省湖州市吴兴区西塞山路819号浙江大学湖州研究院B2幢
-              </a>
-            </h4>
-          </div>
+        <div class="contact-info">
+            <div class="content">
+              <h4>
+                邮箱:
+                <a rel="license" href="mailto:yanjunhi@zju.edu.cn">
+                  yanjunhi@zju.edu.cn</a> |
+                地址:
+                <a rel="license" href="https://ditu.amap.com/place/B0G257WTA3">
+                  浙江省湖州市吴兴区西塞山路819号浙江大学湖州研究院B2幢</a>
+              </h4>
+            </div>
         </div>
       </div>
       <!-- license -->
       <div class="columns is-centered">
-          <div class="content">
-            <p>
-              This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
       </div>
       <!-- ICP -->
       <div class="columns is-centered">
-          <div class="content">
-            <p>
-              <a rel="license" href="https://beian.miit.gov.cn/">浙ICP备2024111762号-1</a>
-            </p>
-          </div>
+        <div class="content">
+          <p>
+            <a rel="license" href="https://beian.miit.gov.cn/">浙ICP备2024111762号-1</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
   <!--/ endfooter -->
-
 </body>
 
 </html>
