@@ -4,7 +4,7 @@ date: 2025-05-19
 image:
   focal_point: 'top'
 
-# tags include: PaperAccepted, Graduation, Awards, Others
+# tags include: PaperAccepted, Graduation, Awards, News, Others
 tags: [Awards]
 ---
 

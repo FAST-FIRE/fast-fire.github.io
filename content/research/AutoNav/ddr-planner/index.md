@@ -1,14 +1,13 @@
 ---
 title: DDR-Planner
 subtitle:  Universal Trajectory Optimization Framework for Differential Drive Robot Class
-date: 2020-12-02
+date: 2025-05-01
 image:
   focal_point: 'top'
 summary: Universal Trajectory Optimization Framework for Differential Drive Robot Class
 tags: [AutoNav]
 
 ---
-
 
 <!--more-->
 
@@ -39,4 +38,5 @@ testing in crowded environments with three kinds of differential
 drive robots to validate the effectiveness of our approach.
 
 **Related Publications:**
+
 - [Universal Trajectory Optimization Framework for Differential Drive Robot Class](https://fast-fire.github.io/publication/journal-article/zmk-tase/)

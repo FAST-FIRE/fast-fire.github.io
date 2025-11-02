@@ -48,6 +48,6 @@ sections:
         view: "showcase"
         columns: "3"
         background:
-          color: "gray-50"
+          color: "gray-50"  
 
 ---

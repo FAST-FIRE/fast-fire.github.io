@@ -38,7 +38,7 @@ abstract: Perception is necessary for autonomous navigation in an unknown area c
 # Summary. An optional shortened abstract.
 summary: A collaborative air-ground framework for perception-limited UGVs' navigation, where a UAV provides perception capabilities to a group of blind UGVs.
 
-tags: []
+tags: [MRS]
 
 # Display this page in the Featured widget?
 featured: true
@@ -60,7 +60,7 @@ url_video: 'https://www.bilibili.com/video/BV1by421a73g'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: 'Image credit: [**FAST-FIRE**](https://pages.fast-fire.space)'
   focal_point: ''
   preview_only: false
 
@@ -80,12 +80,5 @@ projects:
 slides: example
 ---
 
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
 
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
