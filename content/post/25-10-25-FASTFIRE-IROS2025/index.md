@@ -15,13 +15,11 @@ Our laboratory achieved remarkable success at the 2025 IEEE/RSJ International Co
 
 <img src=".\group.jpg"> 
 
-The highlight began on the first day of IROS EXPO, where our team hosted a dynamic booth for **“Air-Ground Cooperation without Global localization: RoFly and CubeTrack Cooperation with CREPES and CoNi-MPC”**. Thanks for the hard work and excellent technique skills from Zhehan Li, Jiajun Yu, Jiadong Lu, and other teammates. The live demonstration ran super successfully. We have shown the live demo every half hour, and it has drawn strong interest every time from researchers and industry visitors from China and abroad. ​The audience is always curious about how these two robots cooperate so well without SLAM inside. Jiadong Lu and Jiajun Yu are very excited to explain to them about CREPES and CoNi-MPC, unveiling the secret of the system.
+The highlight began on the first day of IROS EXPO, where our team hosted a dynamic booth for **“Air-Ground Cooperation without Global localization: RoFly and CubeTrack Cooperation with CREPES and CoNi-MPC”**. Thanks to the hard work and excellent technique skills from Zhehan Li, Jiajun Yu, Jiadong Lu, and other teammates, the live demonstration ran super successfully. We gave a demonstration every half hour, each time attracting great interest from researchers and industry professionals both domestically and internationally. The audience was particularly curious about how these two robots could achieve such efficient collaboration without SLAM inside. Jiadong Lu and Jiajun Yu enthusiastically explained CREPES and CoNi-MPC to them, revealing the secrets of the system.
  
 <video width="320" height="240" autoplay loop muted >
       <source src="./expo_live.mp4"  type="video/mp4">
 </video>
-
-<img src=".\expo_photo.jpg"> 
 
 <img src=".\expoGroup1.jpg"> 
 
