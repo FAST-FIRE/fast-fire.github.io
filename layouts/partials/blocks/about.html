@@ -1,0 +1,97 @@
+{{/* Wowchemy About Widget Override */}}
+{{ $block := .Get "block" }}
+{{ $wcPage := $block.Page }}
+
+{{/* Localize the "About" layout */}}
+<div class="row">
+    <div class="col-12 col-lg-4">
+        <div id="profile">
+            {{ if site.Params.avatar.gravatar }}
+            <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 $wcPage.Params.email }}?s=270"
+                alt="{{$wcPage.Title}}">
+            {{ else if $wcPage.Params.avatar_filename }}
+            {{ $avatar_image := resources.Get (printf "media/%s" $wcPage.Params.avatar_filename) }}
+            {{ if $avatar_image }}
+            {{ $avatar_image := $avatar_image.Fill "270x270 Center" }}
+            <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{$wcPage.Title}}">
+            {{ end }}
+            {{ end }}
+
+            <div class="portrait-title">
+
+                {{/* ————【注意】这里就是我们要修改的地方 ———— */}}
+                <h2>{{ $wcPage.Params.display_name | default $wcPage.Title }}</h2>
+                {{/* ————【修改结束】 ———— */}}
+
+                {{ with $wcPage.Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+
+                {{ range $wcPage.Params.organizations }}
+                <h3>
+                    {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                        <span>{{ .name }}</span>
+                        {{ if .url }}</a>{{ end }}
+                </h3>
+                {{ end }}
+            </div>
+
+            <ul class="network-icon" aria-hidden="true">
+                {{ range $wcPage.Params.social }}
+                {{ $pack := or .icon_pack "fas" }}
+                {{ $pack_prefix := $pack }}
+                {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+                {{ $pack_prefix = "fa" }}
+                {{ end }}
+                {{ $link := .link }}
+                {{ $scheme := (urls.Parse $link).Scheme }}
+                {{ $target := "" }}
+                {{ if not $scheme }}
+                {{ $link = .link | relLangURL }}
+                {{ else if in (slice "http" "https") $scheme }}
+                {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+                {{ end }}
+                <li>
+                    <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ .icon }}">
+                        <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-8">
+        {{/* Bio text */}}
+        {{ $wcPage.Content }}
+
+        {{/* Interests */}}
+        <div class="row">
+            {{ with $wcPage.Params.interests }}
+            <div class="col-md-5">
+                <div class="section-subheading">{{ i18n "interests" | default "Interests" }}</div>
+                <ul class="ul-interests mb-0">
+                    {{ range . }}
+                    <li>{{ . | markdownify | emojify }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            {{ with $wcPage.Params.education }}
+            <div class="col-md-7">
+                <div class="section-subheading">{{ i18n "education" | default "Education" }}</div>
+                <ul class="ul-edu fa-ul mb-0">
+                    {{ range .courses }}
+                    <li>
+                        <i class="fa-li fas fa-graduation-cap"></i>
+                        <div class="description">
+                            <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+                            <p class="institution">{{ .institution }}</p>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
