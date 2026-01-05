@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Jiajun Yu 余佳骏
+title: Jiajun Yu
+display_name: Jiajun Yu 余佳骏
 
 # Full Name (for SEO)
 first_name: Jiajun

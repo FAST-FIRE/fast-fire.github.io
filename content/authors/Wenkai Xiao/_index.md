@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Wenkai Xiao 肖文楷
+title: Wenkai Xiao
+display_name: Wenkai Xiao 肖文楷
 
 # Full Name (for SEO)
 first_name: Wenkai

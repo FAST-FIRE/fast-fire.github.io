@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Baozhe Zhang 张宝哲
+title: Baozhe Zhang
+display_name: Baozhe Zhang 张宝哲
 
 # Full Name (for SEO)
 first_name: Baozhe

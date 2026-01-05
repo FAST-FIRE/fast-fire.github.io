@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Ruitian Pang 庞瑞田
+title: Ruitian Pang
+display_name: Ruitian Pang 庞瑞田
 
 # Full name (for SEO)
 first_name: Ruitian

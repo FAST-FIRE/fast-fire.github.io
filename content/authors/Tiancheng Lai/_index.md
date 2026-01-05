@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Tiancheng Lai 赖天成
+title: Tiancheng Lai
+display_name: Tiancheng Lai 赖天成
 
 # Full Name (for SEO)
 first_name: Tiancheng

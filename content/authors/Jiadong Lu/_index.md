@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Jiadong Lu 卢家栋
+title: Jiadong Lu
+display_name: Jiadong Lu 卢家栋
 
 # Full Name (for SEO)
 first_name: Jiadong

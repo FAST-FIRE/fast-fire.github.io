@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Siqi Shen 沈思琦
+title: Siqi Shen
+display_name: Siqi Shen 沈思琦
 
 # Full Name (for SEO)
 first_name: Siqi

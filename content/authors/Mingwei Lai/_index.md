@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Mingwei Lai 赖明威
+title: Mingwei Lai
+display_name: Mingwei Lai 赖明威
 
 # Full name (for SEO)
 first_name: Mingwei

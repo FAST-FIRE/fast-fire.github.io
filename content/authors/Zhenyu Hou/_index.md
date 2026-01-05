@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Zhenyu Hou 候振宇
+title: Zhenyu Hou
+display_name: Zhenyu Hou 候振宇
 
 # Full Name (for SEO)
 first_name: Zhenyu

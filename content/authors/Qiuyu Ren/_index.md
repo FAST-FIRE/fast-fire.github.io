@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Qiuyu Ren 任秋予
+title: Qiuyu Ren
+display_name: Qiuyu Ren 任秋予
 
 # Full name (for SEO)
 first_name: Mengke

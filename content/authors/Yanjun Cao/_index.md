@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Yanjun Cao 曹燕军
+title: Yanjun Cao
+display_name: Yanjun Cao 曹燕军
 
 # Full Name (for SEO)
 first_name: Yanjun

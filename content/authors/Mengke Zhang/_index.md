@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Mengke Zhang 张孟轲
+title: Mengke Zhang
+display_name: Mengke Zhang 张孟轲
 
 # Full name (for SEO)
 first_name: Mengke

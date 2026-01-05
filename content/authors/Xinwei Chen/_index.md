@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Xinwei Chen 陈鑫炜
+title: Xinwei Chen
+display_name: Xinwei Chen 陈鑫炜
 
 # Full Name (for SEO)
 first_name: Xinwei

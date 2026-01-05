@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Guodong Liu 刘国栋
+title: Guodong Liu
+display_name: Guodong Liu 刘国栋
 
 # Full name (for SEO)
 first_name: Guodong

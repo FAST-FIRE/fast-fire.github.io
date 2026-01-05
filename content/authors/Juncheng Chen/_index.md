@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Juncheng Chen 陈俊成
+title: Juncheng Chen
+display_name: Juncheng Chen 陈俊成
 
 # Full name (for SEO)
 first_name: Juncheng

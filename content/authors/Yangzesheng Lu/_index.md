@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Yangzesheng Lu 鲁杨泽晟
+title: Yangzesheng Lu
+display_name: Yangzesheng Lu 鲁杨泽晟
 
 # Full name (for SEO)
 first_name: Yangzesheng

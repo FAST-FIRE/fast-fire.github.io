@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Xiangyu Li 李翔宇
+title: Xiangyu Li
+display_name: Xiangyu Li 李翔宇
 
 # Full Name (for SEO)
 first_name: Xiangyu

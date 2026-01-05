@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Wentao Liu 刘文涛
+title: Wentao Liu
+display_name: Wentao Liu 刘文涛
 
 # Full Name (for SEO)
 first_name: Wentao

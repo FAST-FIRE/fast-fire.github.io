@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Yuqian Ye 叶郁芊
+title: Yuqian Ye
+display_name: Yuqian Ye 叶郁芊
 
 # Full name (for SEO)
 first_name: Yuqian

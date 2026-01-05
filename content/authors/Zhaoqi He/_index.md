@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Zhaoqi He 何兆奇
+title: Zhaoqi He
+display_name: Zhaoqi He 何兆奇
 
 # Full Name (for SEO)
 first_name: Zhaoqi

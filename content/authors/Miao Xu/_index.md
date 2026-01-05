@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Miao Xu 徐淼
+title: Miao Xu
+display_name: Miao Xu 徐淼
 
 # Full Name (for SEO)
 first_name: Miao

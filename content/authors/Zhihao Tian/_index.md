@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Zhihao Tian 田智浩
+title: Zhihao Tian
+display_name: Zhihao Tian 田智浩
 
 # Full name (for SEO)
 first_name: Zhihao  

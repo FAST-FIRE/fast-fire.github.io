@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Zhehan Li 李哲晗
+title: Zhehan Li
+display_name: Zhehan Li 李哲晗
 
 # Full name (for SEO)
 first_name: Zhehan

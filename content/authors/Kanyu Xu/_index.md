@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Kanyu Xu 徐阚宇
+title: Kanyu Xu
+display_name: Kanyu Xu 徐阚宇
 
 # Full name (for SEO)
 first_name: Kanyu

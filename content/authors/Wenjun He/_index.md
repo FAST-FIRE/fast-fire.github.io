@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Wenjun He 贺文君
+title: Wenjun He
+display_name: Wenjun He 贺文君
 
 # Full name (for SEO)
 first_name: Wenjun

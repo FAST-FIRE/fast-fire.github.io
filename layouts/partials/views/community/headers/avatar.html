@@ -1,0 +1,23 @@
+<div class="media author-card content-widget-hr">
+    {{ if and .Params.avatar_filename (not (eq .Params.avatar_filename "")) }}
+    {{ $avatar_image := resources.Get (printf "media/%s" .Params.avatar_filename) }}
+    {{ if $avatar_image }}
+    {{ $avatar_image := $avatar_image.Fill "270x270 Center" }}
+    <img class="avatar mr-3 avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{ .Title }}">
+    {{ end }}
+    {{ else if .Params.email }}
+    {{ $email_hash := md5 .Params.email }}
+    <img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/{{ $email_hash }}?s=200"
+        alt="{{ .Title }}">
+    {{ end }}
+
+    <div class="media-body">
+        {{/* display_name 替换 title */}}
+        <h5 class="card-title">{{ .Params.display_name | default .Title }}</h5>
+
+        {{ with .Params.role }}<h6 class="card-subtitle">{{ . | markdownify | emojify }}</h6>{{ end }}
+        {{ with .Params.bio }}<p class="card-text">{{ . | markdownify | emojify }}</p>{{ end }}
+
+        {{ partial "social_links" . }}
+    </div>
+</div>

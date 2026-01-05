@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Ge Wan 万舸
+title: Ge Wan
+display_name: Ge Wan 万舸
 
 # Full name (for SEO)
 first_name: Ge

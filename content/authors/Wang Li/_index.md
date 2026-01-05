@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Wang Li 王力
+title: Wang Li
+display_name: Wang Li 王力
 
 # Full Name (for SEO)
 first_name: Li

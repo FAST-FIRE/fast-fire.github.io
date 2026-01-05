@@ -1,6 +1,9 @@
 ---
 # Display name
-title: Nanhe Chen 陈楠禾
+# title: Nanhe Chen 陈楠禾
+title: Nanhe Chen
+
+display_name: Nanhe Chen 陈楠禾
 
 # Full Name (for SEO)
 first_name: Nanhe

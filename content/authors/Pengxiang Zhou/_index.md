@@ -1,6 +1,7 @@
 ---
 # Display name
-title: Pengxiang Zhou 周鹏翔
+title: Pengxiang Zhou
+display_name: Pengxiang Zhou 周鹏翔
 
 # Full Name (for SEO)
 first_name: Pengxiang
