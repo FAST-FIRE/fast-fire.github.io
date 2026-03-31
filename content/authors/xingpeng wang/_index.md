@@ -29,8 +29,8 @@ education:
   courses:
     - course: MEng in Automation
       institution: Zhejiang University
-    - course: BEng in Agricultural Engineering
-      institution: University
+    - course: BEng in Automation
+      institution: Jiangnan University
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -47,5 +47,5 @@ user_groups:
   - Grad Students
 ---
 
-Shen Siqi is currently pursuing a master's degree in the FastLab (Fire Group) at the College of Control Science and Engineering, Zhejiang University, under the supervision of Yanjun Cao and Chao Xu.
+
 
