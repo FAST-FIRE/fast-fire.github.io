@@ -5,14 +5,15 @@ authors:
 - Xinwei Chen
 - Qingcheng Chen
 - Giovanni Beltrame
-- Chao xu
+- Chao Xu
 - Fei Gao
 - Yanjun Cao
 author_notes:
 - "Equal contribution"
 - "Equal contribution"
 date: "2025-05-08T00:00:00Z"
-doi: "110.1109/LRA.2025.3568314"
+doi: "10.1109/LRA.2025.3568314"
+
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-08-11T00:00:00Z"
@@ -37,7 +38,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10993292'
+url_pdf: 'https://ieeexplore.ieee.org/document/10993292'
 url_code: ''
 url_dataset: ''
 url_poster: ''

@@ -13,7 +13,7 @@ author_notes:
 # - "Equal contribution"
 
 date: "2025-09-12"
-doi: "10.1109/LRA.2025.3597510"
+doi: "https://doi.org/10.1007/s10514-025-10209-4"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-09-12"
