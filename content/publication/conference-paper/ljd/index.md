@@ -62,7 +62,7 @@ url_video: 'https://bilibili.com/video/BV1SM4m1y72C/?spm_id_from=333.1387.homepa
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**FAST-FIRE**](https://pages.fast-fire.space)'
+  caption: 'Image credit: [**FAST-FIRE**](https://fast-fire.space)'
   focal_point: ''
   preview_only: false
 

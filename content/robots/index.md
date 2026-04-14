@@ -9,7 +9,7 @@ sections:
     content:
       slides:
       - title: RoFly
-        content: '[**A Heterogeneous Robot that Can Move as Rolling and Flying.** ](https://pages.fast-fire.space/RoFly/)'
+        content: '[**A Heterogeneous Robot that Can Move as Rolling and Flying.** ](https://fast-fire.space/RoFly/)'
         align: center
         background:
           image:

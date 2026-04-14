@@ -60,7 +60,7 @@ url_video: 'https://www.bilibili.com/video/BV1by421a73g'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**FAST-FIRE**](https://pages.fast-fire.space)'
+  caption: 'Image credit: [**FAST-FIRE**](https://fast-fire.space)'
   focal_point: ''
   preview_only: false
 
