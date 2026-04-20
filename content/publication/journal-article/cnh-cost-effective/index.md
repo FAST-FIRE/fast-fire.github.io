@@ -11,7 +11,8 @@ authors:
 author_notes:
 - "Equal contribution"
 date: "2023-10-18T00:00:00Z"
-doi: "10.1109/LRA.2023.3325776"
+doi: "10.1109/LRA.2024.3408511"
+
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-08-11T00:00:00Z"
