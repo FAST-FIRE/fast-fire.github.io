@@ -1,3 +1,13 @@
+/*
+  FAST-FIRE site styles.
+  Palette (keep in sync with data/themes/fastfire.toml):
+    accent       #0F62FE
+    accent dark  #0043CE
+    accent night #78A9FF
+    text         #1f2933
+    tint         #f5f8ff
+*/
+
 // Make page header alignment consistent with widget page header alignment
 .universal-wrapper h1 {
   text-align: center;
@@ -6,4 +16,186 @@
 // Center the CTA shortcode button
 .cta-group {
   justify-content: center;
+}
+
+/* ── Section rhythm ──────────────────────────────────────── */
+
+.home-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+// Section titles: centered with a short accent bar underneath
+.home-section .section-heading h1 {
+  text-align: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin: 0.6rem auto 0;
+    background: #0F62FE;
+    border-radius: 2px;
+  }
+}
+
+// On photo/dark sections the accent bar reads better in white
+.home-section.dark .section-heading h1::after {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+
+.wg-hero {
+  text-align: center;
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 18px rgba(0, 20, 60, 0.55);
+  }
+
+  .hero-lead {
+    max-width: 46rem;
+    margin: 1rem auto 0;
+    font-size: 1.15rem;
+    text-shadow: 0 1px 10px rgba(0, 20, 60, 0.5);
+  }
+
+  .cta-btns {
+    margin-top: 1.75rem;
+  }
+
+  .hero-cta-alt {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Overlay text on the Join Us photo banner
+.home-section.dark .section-heading h1,
+.home-section.dark p {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+// Buttons on photo sections: no inherited text glow, neutral elevation shadow
+// (the blue-tinted shadow reads as gray haze on busy photo backgrounds)
+.home-section.dark .cta-btns .btn,
+.home-section.dark .cta-group .btn {
+  text-shadow: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  }
+}
+
+// Justify the "Who We Are" mission statement.
+// The markdown block renders its text inline inside .col-12 (no <p> wrapper).
+#about .col-12:not(.section-heading),
+#about p {
+  text-align: justify;
+}
+
+/* ── Cards (news collection and other card views) ────────── */
+
+.card-simple.view-card {
+  border: 1px solid rgba(15, 98, 254, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(16, 36, 94, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(16, 36, 94, 0.14);
+  }
+}
+
+// "All news" archive link under the collection
+.see-all a {
+  font-weight: 600;
+}
+
+// Homepage news: lay the cards out as a responsive 2-column grid
+#news .col-12:not(.section-heading) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  .card-simple {
+    margin-top: 0;
+  }
+
+  .see-all {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #news .col-12:not(.section-heading) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+
+.cta-btns .btn,
+.cta-group .btn,
+.btn-primary {
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(15, 98, 254, 0.25);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba(15, 98, 254, 0.35);
+  }
+}
+
+/* ── Features (research areas) ───────────────────────────── */
+
+.wg-features {
+  // Fixed-height flex box keeps the three column headings aligned
+  // even when individual icons render at different sizes
+  .featurette-icon {
+    color: #0F62FE;
+    height: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Custom SVG icons render as <img> at 0.9em; size up to visually match FA glyphs.
+  // FA glyphs sit on the text baseline (visually lower), so nudge the imgs down
+  // to align the three icons' visual centers.
+  .featurette-icon img.svg-icon {
+    height: 1.1em;
+    width: 1.1em;
+    transform: translateY(0.12em);
+  }
+
+  // The CubeTrack drawing is lighter-weight; render it larger for visual parity
+  .featurette-icon img.svg-icon[src*='cubetrack'] {
+    height: 1.3em;
+    width: 1.3em;
+  }
+
+  // Custom SVG icons carry a baked-in #0F62FE fill; brighten them in night mode
+  // to approximate the dark-palette accent (#78a9ff)
+  .dark & .featurette-icon img.svg-icon {
+    filter: brightness(1.6) saturate(0.75);
+  }
+
+  .section-subheading {
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
 }

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Reconfigurable tracked robot">
+  <g transform="translate(32 30) scale(1.13) translate(-32 -30)">
+  <!-- track band: rounded-corner arcs wrap concentrically around the three wheels -->
+  <path d="M 25.98 12.38 A 7.3 7.3 0 0 1 38.02 12.38 L 56.52 39.38 A 7.3 7.3 0 0 1 50.5 50.8 L 13.5 50.8 A 7.3 7.3 0 0 1 7.48 39.38 Z"
+        fill="none" stroke="#0F62FE" stroke-width="4.2" stroke-linejoin="round"
+        stroke-dasharray="4.6 3.6"/>
+  <!-- chassis bar joining the tops of the two bottom wheels -->
+  <line x1="13.5" y1="39.1" x2="50.5" y2="39.1" stroke="#0F62FE" stroke-width="3.2" stroke-linecap="round"/>
+  <!-- arm from the top wheel center down to the midpoint between the bottom wheel centers -->
+  <line x1="32" y1="16.5" x2="32" y2="43.5" stroke="#0F62FE" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- wheels -->
+  <g fill="none" stroke="#0F62FE" stroke-width="3.4">
+    <circle cx="32" cy="16.5" r="4.4"/>
+    <circle cx="13.5" cy="43.5" r="4.4"/>
+    <circle cx="50.5" cy="43.5" r="4.4"/>
+  </g>
+  <!-- hubs / pivot -->
+  <circle cx="32" cy="16.5" r="1.5" fill="#0F62FE"/>
+  <circle cx="32" cy="43.5" r="2.6" fill="#0F62FE"/>
+  </g>
+</svg>

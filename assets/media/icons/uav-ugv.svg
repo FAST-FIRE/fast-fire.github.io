@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="UAV and UGV cooperation">
+  <g fill="#0F62FE">
+    <!-- UAV rotors -->
+    <rect x="2" y="5" width="21" height="3.5" rx="1.75"/>
+    <rect x="41" y="5" width="21" height="3.5" rx="1.75"/>
+    <!-- rotor masts -->
+    <rect x="11" y="8.5" width="3" height="5.5"/>
+    <rect x="50" y="8.5" width="3" height="5.5"/>
+    <!-- arm bar -->
+    <rect x="9" y="12.5" width="46" height="3.5" rx="1.75"/>
+    <!-- UAV body -->
+    <rect x="25" y="10.5" width="14" height="10" rx="3.5"/>
+    <!-- communication link between UAV and UGV -->
+    <rect x="30.5" y="24.5" width="3" height="4.5" rx="1.5"/>
+    <rect x="30.5" y="31" width="3" height="4.5" rx="1.5"/>
+    <!-- UGV antenna -->
+    <circle cx="46.2" cy="33.5" r="2.1"/>
+    <rect x="45" y="34.5" width="2.5" height="5.5" rx="1.2"/>
+    <!-- UGV body -->
+    <rect x="12" y="39" width="40" height="12" rx="3.5"/>
+    <!-- wheels (two-wheel differential drive) -->
+    <circle cx="21" cy="52.5" r="6"/>
+    <circle cx="43" cy="52.5" r="6"/>
+  </g>
+</svg>

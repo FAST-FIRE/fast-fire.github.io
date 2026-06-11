@@ -1,0 +1,35 @@
+# Theme metadata
+# FAST-FIRE custom theme: clean white + tech blue accent.
+# Schema follows the built-in themes in blox-bootstrap v5 (data/themes/minimal.toml).
+name = "FAST-FIRE"
+
+[light]
+  # Primary
+  primary = "#0F62FE"
+
+  # Menu
+  menu_primary = "#fff"
+  menu_text = "#1f2933"
+  menu_text_active = "#0F62FE"
+  menu_title = "#111827"
+
+  # Home sections
+  home_section_odd = "rgb(255, 255, 255)"
+  home_section_even = "#f5f8ff"
+
+[dark]
+  # Primary
+  primary = "#78a9ff"
+
+  # Menu
+  menu_primary = "rgb(17, 24, 39)"
+  menu_text = "rgba(255, 255, 255, 0.65)"
+  menu_text_active = "#78a9ff"
+  menu_title = "#fff"
+
+  # Home sections
+  home_section_odd = "#111827"
+  home_section_even = "#1a2233"
+
+  link = "#78a9ff"
+  link_hover = "#a6c8ff"
