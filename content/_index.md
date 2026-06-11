@@ -7,34 +7,121 @@ view: compact
 
 sections:
 
-  # Hero banner: swarm light-trail photo, headline, and two calls to action
-  - block: hero
+  # Hero carousel: fixed headline over auto-rotating lab photos
+  - block: slider
     id: hero
     content:
-      title: Intelligent Robot Swarms for the Real World
-      text: |-
-        **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
-        — the **FIRE** group of the **FAST Lab**.
-      cta:
-        label: Explore our research
-        url: research/
-        icon_pack: fas
-        icon: robot
-      cta_alt:
-        label: Meet the team
-        url: people/
+      slides:
+        - title: Intelligent Robot Swarms for the Real World
+          content: |-
+            **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
+            — the **FIRE** group of the **FAST Lab**.
+          align: center
+          background:
+            image:
+              filename: cover.jpg
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+          link:
+            icon: robot
+            icon_pack: fas
+            text: Explore our research
+            url: research/
+          link_alt:
+            text: Meet the team
+            url: people/
+        - title: Intelligent Robot Swarms for the Real World
+          content: |-
+            **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
+            — the **FIRE** group of the **FAST Lab**.
+          align: center
+          background:
+            image:
+              filename: crepes.jpg
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+          link:
+            icon: robot
+            icon_pack: fas
+            text: Explore our research
+            url: research/
+          link_alt:
+            text: Meet the team
+            url: people/
+        - title: Intelligent Robot Swarms for the Real World
+          content: |-
+            **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
+            — the **FIRE** group of the **FAST Lab**.
+          align: center
+          background:
+            image:
+              filename: coni-mpc.jpg
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+          link:
+            icon: robot
+            icon_pack: fas
+            text: Explore our research
+            url: research/
+          link_alt:
+            text: Meet the team
+            url: people/
+        - title: Intelligent Robot Swarms for the Real World
+          content: |-
+            **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
+            — the **FIRE** group of the **FAST Lab**.
+          align: center
+          background:
+            image:
+              filename: trofybot.jpg
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+          link:
+            icon: robot
+            icon_pack: fas
+            text: Explore our research
+            url: research/
+          link_alt:
+            text: Meet the team
+            url: people/
+        - title: Intelligent Robot Swarms for the Real World
+          content: |-
+            **Center of Swarm Navigation (CSN)** at Huzhou Institute of Zhejiang University\
+            — the **FIRE** group of the **FAST Lab**.
+          align: center
+          background:
+            image:
+              filename: ddr-planner.jpg
+              filters:
+                brightness: 0.6
+            position: center
+            color: '#333'
+          link:
+            icon: robot
+            icon_pack: fas
+            text: Explore our research
+            url: research/
+          link_alt:
+            text: Meet the team
+            url: people/
     design:
-      background:
-        image:
-          filename: cover.jpg
-          filters:
-            brightness: 0.55
-          size: cover
-          position: center
-          parallax: false
-        text_color_light: true
-      spacing:
-        padding: ['140px', '0', '140px', '0']
+      slide_height: '560px'
+      is_fullscreen: false
+      # Crossfade between slides: every slide carries the same text, so the
+      # text appears fixed while only the background photos change
+      css_class: carousel-fade
+      # Automatically transition through slides
+      loop: true
+      # Duration each slide is shown (in ms)
+      interval: 5000
 
   # Mission statement
   - block: markdown

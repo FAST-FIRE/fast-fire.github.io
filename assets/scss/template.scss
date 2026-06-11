@@ -70,6 +70,9 @@
 
   .hero-cta-alt {
     color: rgba(255, 255, 255, 0.9);
+    // Align with the adjacent button (a .btn is vertical-align: middle;
+    // plain links default to baseline, which renders visibly higher)
+    vertical-align: middle;
 
     &:hover {
       color: #fff;
@@ -81,6 +84,21 @@
 .home-section.dark .section-heading h1,
 .home-section.dark p {
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+// Homepage hero carousel on small screens: the theme hard-codes 6rem inline
+// margins on the slide text (to clear the arrows), which squeezes the text to
+// ~180px on phones. Relax the margins and slim the arrows instead.
+@media (max-width: 767.98px) {
+  #hero .wg-hero.container {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+
+  #hero .carousel-control-prev,
+  #hero .carousel-control-next {
+    width: 8%;
+  }
 }
 
 // Buttons on photo sections: no inherited text glow, neutral elevation shadow
