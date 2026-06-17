@@ -13,6 +13,9 @@ superuser: false
 # Role/position
 role: Research Assistant
 
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Master @ Lund University"
+
 # Organizations/Affiliations
 organizations:
   - name: Lund University

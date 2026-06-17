@@ -17,6 +17,9 @@ superuser: false
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
 role: Master
 
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "DJI"
+
 # Organizations/Affiliations
 organizations:
   - name: Zhejiang University
@@ -49,7 +52,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
   # - Visitors
   # - Engineers
   # - Administration

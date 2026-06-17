@@ -17,6 +17,9 @@ superuser: false
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
 role: Research Assistant
 
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Ph.D. @ Tsinghua University"
+
 # Organizations/Affiliations
 organizations:
   - name: Tsinghua University

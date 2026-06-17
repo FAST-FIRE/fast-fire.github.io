@@ -15,6 +15,9 @@ superuser: false
 # Role/position
 role: Master
 
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Ph.D. @ HKU"
+
 # Organizations/Affiliations
 organizations:
   - name: Zhejiang University
@@ -60,7 +63,8 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+   - Alumni
+#  - Grad Students
 ---
 
 Nanhe Chen is a master's candidate in control theory and engineering at the FASTLab. He obtained his bachelor's degree with honors in Chu Kochen Honors College and Control Science and Engineering College, Zhejiang University in 2023.

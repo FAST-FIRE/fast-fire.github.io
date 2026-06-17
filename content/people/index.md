@@ -20,6 +20,11 @@ sections:
           - Visitors
           - Alumni
 
+      # Groups rendered as a compact row of name chips (no photo/role/social)
+      compact_groups:
+          - Visitors
+          - Alumni
+
       sort_by: Params.last_name
       sort_ascending: true
     design:

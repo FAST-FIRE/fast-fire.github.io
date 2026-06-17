@@ -13,6 +13,9 @@ superuser: false
 # Role/position
 role: Research Assistant
 
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Ph.D. @ CUHK-Shenzhen"
+
 # Organizations/Affiliations
 organizations:
   - name: The Chinese University of Hong Kong, Shenzhen
