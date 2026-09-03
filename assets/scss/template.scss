@@ -321,7 +321,124 @@
   // Tighten the name/role/social stack, then restore the same amount below
   // each person so wrapped avatar rows keep their existing vertical rhythm.
   .people-person {
-    padding-bottom: 12px;
+    padding-bottom: 22px;
+  }
+
+  // Group headings act as visual dividers without adding cards around every
+  // person. The PI role is already shown inside the featured profile card.
+  .people-group-heading {
+    margin-top: 2.5rem;
+
+    >h2 {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      max-width: 1200px;
+      margin: 0 auto 1.5rem !important;
+      font-weight: 500;
+
+      &::before,
+      &::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: rgba(31, 41, 51, 0.14);
+      }
+    }
+  }
+
+  .people-group-heading--principal-investigator {
+    display: none;
+  }
+
+  .people-group-heading--grad-students {
+    margin-top: 0.5rem;
+  }
+
+  // Give the single PI a clear visual role rather than leaving one portrait
+  // floating in the middle of an otherwise empty row.
+  .people-person--principal-investigator {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+    gap: 2rem;
+    flex: 0 0 auto;
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    margin: 1rem auto 1.5rem;
+    padding: 1.75rem 2rem;
+    text-align: left;
+    background: #f5f8ff;
+    border: 1px solid rgba(15, 98, 254, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(16, 36, 94, 0.08);
+
+    >a {
+      line-height: 0;
+    }
+
+    .avatar {
+      width: 180px;
+      max-width: 180px;
+    }
+
+    .portrait-title h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .portrait-title h3 {
+      margin-bottom: 0.65rem;
+      font-size: 0.9rem;
+    }
+
+    .people-person-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+
+      h2,
+      h3,
+      ul.network-icon {
+        margin: 0;
+      }
+    }
+
+    .people-person-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .people-person-separator {
+      color: rgba(79, 93, 107, 0.55);
+      font-weight: 400;
+    }
+
+    .people-person-bio {
+      color: #4f5d6b;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      text-align: left;
+
+      p {
+        margin: 0.75rem 0 0;
+      }
+    }
+  }
+
+  // A small avatar lift adds feedback while preserving the established grid
+  // dimensions and the vertical distance between portrait rows.
+  .people-person:not(.people-person--principal-investigator) .avatar {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .people-person:not(.people-person--principal-investigator):hover .avatar {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 36, 94, 0.16);
   }
 
   .section-heading p {
@@ -333,7 +450,8 @@
   }
 
   .portrait-title h2 {
-    font-size: 1.1667rem;
+    font-size: 1.1rem;
+    margin-top: 10px;
     margin-bottom: 4px;
   }
 
@@ -352,6 +470,48 @@
 
   .people-chip .chip-dest {
     font-size: 0.84rem;
+  }
+}
+
+.dark .wg-people {
+  .people-group-heading>h2 {
+    &::before,
+    &::after {
+      background: rgba(255, 255, 255, 0.16);
+    }
+  }
+
+  .people-person--principal-investigator {
+    background: rgba(120, 169, 255, 0.1);
+    border-color: rgba(120, 169, 255, 0.18);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+
+    .people-person-bio {
+      color: #b6c2d1;
+    }
+
+    .people-person-separator {
+      color: rgba(182, 194, 209, 0.6);
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .wg-people .people-person--principal-investigator {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 340px;
+    padding: 1.5rem;
+    text-align: center;
+
+    .people-person-meta {
+      justify-content: center;
+    }
+
+    .avatar {
+      width: 160px;
+      max-width: 160px;
+    }
   }
 }
 
@@ -419,5 +579,319 @@
 @media (max-width: 767.98px) {
   .people-chip {
     flex: 0 0 calc((100% - 0.6rem) / 2); // 2 per row
+  }
+}
+
+/* ── Publications: searchable academic card list ─────────── */
+
+.publication-list-page {
+  min-height: calc(100vh - 70px);
+  padding-bottom: 4rem;
+  background: #f6f8fc;
+
+  >.universal-wrapper.pt-3 {
+    max-width: 1120px;
+    padding-top: 2.75rem !important;
+    padding-bottom: 0.75rem;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 0;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 54px;
+        height: 4px;
+        margin: 0.7rem auto 0;
+        border-radius: 999px;
+        background: #0f62fe;
+      }
+    }
+  }
+}
+
+.publication-list-wrapper {
+  max-width: 1120px;
+  padding-top: 0.25rem;
+}
+
+.publication-intro {
+  margin-bottom: 1.25rem;
+}
+
+.publication-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem;
+  background: #fff;
+  border: 1px solid rgba(24, 39, 75, 0.09);
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(24, 39, 75, 0.06);
+}
+
+.publication-search-control {
+  position: relative;
+  flex: 1 1 420px;
+
+  >i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 1;
+    color: #8793a4;
+    font-size: 0.85rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .form-control {
+    width: 100%;
+    height: 44px;
+    padding-left: 2.6rem;
+    border-color: #dbe1ea;
+    border-radius: 10px;
+    background: #fbfcfe;
+    font-size: 0.86rem;
+  }
+}
+
+.publication-filter-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.75rem;
+
+  .form-control {
+    width: auto;
+    min-width: 170px;
+    height: 44px;
+    padding-right: 2.25rem;
+    border-color: #dbe1ea;
+    border-radius: 10px;
+    background-color: #fbfcfe;
+    font-size: 0.86rem;
+
+    &:last-child {
+      min-width: 130px;
+    }
+  }
+}
+
+.publication-grid {
+  margin-top: 0.25rem;
+}
+
+.publication-item {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.pub-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.3rem 1.5rem 1.2rem 1.65rem;
+  background: #fff;
+  border: 1px solid rgba(24, 39, 75, 0.09);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(24, 39, 75, 0.045);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    left: 0;
+    width: 4px;
+    border-radius: 0 999px 999px 0;
+    background: #0f62fe;
+    opacity: 0.72;
+  }
+
+  &:hover {
+    border-color: rgba(15, 98, 254, 0.2);
+    box-shadow: 0 10px 28px rgba(24, 39, 75, 0.09);
+    transform: translateY(-2px);
+  }
+}
+
+.pub-card-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.pub-card-year {
+  color: #0f62fe;
+}
+
+.pub-card-type {
+  padding: 0.18rem 0.5rem;
+  color: #506176;
+  border-radius: 999px;
+  background: #edf3ff;
+}
+
+.pub-card-title {
+  margin: 0 0 0.55rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.42;
+
+  a {
+    color: #182337;
+    text-decoration: none;
+
+    &:hover {
+      color: #0f62fe;
+    }
+  }
+}
+
+.pub-card-authors {
+  margin: 0;
+  color: #5b6879;
+  font-size: 0.82rem;
+  line-height: 1.55;
+
+  a {
+    color: inherit;
+    font-weight: 500;
+
+    &:hover {
+      color: #0f62fe;
+    }
+  }
+}
+
+.pub-card-venue {
+  margin-top: 0.28rem;
+  color: #768397;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  p {
+    margin: 0;
+  }
+}
+
+.pub-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 0;
+  margin-top: 0.8rem;
+
+  .btn-page-header {
+    margin: 0 !important;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+}
+
+.dark .publication-list-page {
+  background: #141820;
+
+  .publication-toolbar,
+  .pub-card {
+    background: #1c222d;
+    border-color: rgba(255, 255, 255, 0.09);
+  }
+
+  .publication-toolbar {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
+  }
+
+  .publication-search-control .form-control,
+  .publication-filter-group .form-control {
+    color: #d9e2ef;
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: #171c25;
+  }
+
+  .pub-card-title a {
+    color: #edf3fb;
+
+    &:hover {
+      color: #78a9ff;
+    }
+  }
+
+  .pub-card-authors {
+    color: #b4c0d0;
+  }
+
+  .pub-card-venue {
+    color: #919fb2;
+  }
+
+  .pub-card-type {
+    color: #b9cff7;
+    background: rgba(120, 169, 255, 0.13);
+  }
+
+  .pub-card-year {
+    color: #78a9ff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .publication-list-page {
+    padding-bottom: 2.5rem;
+
+    >.universal-wrapper.pt-3 {
+      padding-top: 2rem !important;
+    }
+  }
+
+  .publication-list-wrapper {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .publication-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .publication-search-control {
+    flex-basis: auto;
+  }
+
+  .publication-filter-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    .form-control,
+    .form-control:last-child {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  .pub-card {
+    padding: 1.15rem 1.1rem 1.05rem 1.3rem;
+  }
+
+  .pub-card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .publication-filter-group {
+    grid-template-columns: 1fr;
   }
 }

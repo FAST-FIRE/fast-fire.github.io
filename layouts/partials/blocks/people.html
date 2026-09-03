@@ -30,6 +30,7 @@
 
   {{ range $block.content.user_groups }}
     {{ $group := . }}
+    {{ $group_class := $group | anchorize }}
     {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
 
     {{/* Sort */}}
@@ -42,14 +43,14 @@
     {{ $is_compact := in $compact_groups $group }}
 
     {{if $query | and (gt (len $block.content.user_groups) 1) }}
-      <div class="col-md-12">
+      <div class="col-md-12 people-group-heading people-group-heading--{{ $group_class }}">
         <h2 class="mb-4 {{ if $is_compact }}mt-2{{ end }}">{{ $group | markdownify }}</h2>
       </div>
     {{end}}
 
     {{ if $is_compact }}
       {{/* Compact name-chip row: no photos, no role, no social. */}}
-      <div class="col-12 mb-4 people-compact">
+      <div class="col-12 mb-4 people-compact people-compact--{{ $group_class }}">
         {{ range $query }}
           {{ $link := "" }}
           {{ with site.GetPage (printf "/authors/%s" (path.Base .File.Dir)) }}
@@ -70,7 +71,7 @@
       {{ with site.GetPage (printf "/authors/%s" (path.Base .File.Dir)) }}
         {{ $link = .RelPermalink }}
       {{ end }}
-      <div class="col-12 col-sm-auto people-person">
+      <div class="col-12 col-sm-auto people-person people-person--{{ $group_class }}">
         {{ $src := "" }}
         {{ if site.Params.features.avatar.gravatar }}
           {{ $src = printf "https://s.gravatar.com/avatar/%s?s=150" (md5 .Params.email) }}
@@ -84,11 +85,26 @@
         {{ end }}
 
         <div class="portrait-title">
-          <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>
-          {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}
-          {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
-          {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
-          {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+          {{ if eq $group_class "principal-investigator" }}
+            <div class="people-person-meta">
+              <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>
+              {{ if and $show_role .Params.role }}
+                <div class="people-person-meta-item"><span class="people-person-separator" aria-hidden="true">|</span><h3>{{ .Params.role | markdownify | emojify }}</h3></div>
+              {{ end }}
+              {{ if $show_social }}
+                <div class="people-person-meta-item"><span class="people-person-separator" aria-hidden="true">|</span>{{ partial "social_links" . }}</div>
+              {{ end }}
+            </div>
+          {{ else }}
+            <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Title }}{{if $link}}</a>{{end}}</h2>
+            {{ if and $show_organizations .Params.organizations }}{{ range .Params.organizations }}<h3>{{ .name }}</h3>{{ end }}{{ end }}
+            {{ if and $show_role .Params.role }}<h3>{{ .Params.role | markdownify | emojify }}</h3>{{ end }}
+            {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+            {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+          {{ end }}
+          {{ if eq $group_class "principal-investigator" }}
+            {{ with .Content }}<div class="people-person-bio">{{ . }}</div>{{ end }}
+          {{ end }}
         </div>
       </div>
     {{ end }}
