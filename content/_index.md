@@ -77,7 +77,7 @@ sections:
   - block: collection
     id: news
     content:
-      title: Latest News
+      title:
       subtitle:
       text:
       count: 8
