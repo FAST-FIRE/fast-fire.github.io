@@ -8,4 +8,8 @@ view: compact
 banner:
   caption: ''
   image: ''
+
+design:
+  css_class: news-list-page
 ---
+

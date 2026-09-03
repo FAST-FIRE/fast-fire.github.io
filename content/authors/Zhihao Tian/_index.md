@@ -18,7 +18,7 @@ superuser: false
 role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
-graduation_destination: "Mphil @ Hong Kong University of Science and Technology (Guangzhou)"
+graduation_destination: "Mphil @ HKUST (GZ)"
 
 # Organizations/Affiliations
 organizations:

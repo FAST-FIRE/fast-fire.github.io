@@ -15,7 +15,9 @@ authors:
 superuser: false
 
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
-role: Visitors
+role: Alumni
+
+graduation_destination: "Master @ Nanjing University"
 
 # Organizations/Affiliations
 organizations:
@@ -49,8 +51,9 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
+  - Alumni
 #  - Grad Students
-  - Visitors
+# - Visitors
 #  - Engineers
 #  - Administration
 ---

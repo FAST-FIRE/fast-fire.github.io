@@ -4,9 +4,9 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Spotlight
-    url: spotlight
-    weight: 10
+  # - name: Spotlight
+  #   url: spotlight
+  #   weight: 10
   - name: News
     url: post
     weight: 20
@@ -19,6 +19,6 @@ main:
   - name: Publications
     url: publication
     weight: 50
-  - name: Robots
-    url: robots
-    weight: 60
+  # - name: Robots
+  #   url: robots
+  #   weight: 60

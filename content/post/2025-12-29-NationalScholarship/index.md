@@ -8,5 +8,5 @@ tags: [News]
 
 ---
 
-右3是Nanhe Chen
+The third one from the right is Nanhe Chen.
 

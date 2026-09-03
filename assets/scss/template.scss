@@ -8,9 +8,20 @@
     tint         #f5f8ff
 */
 
-// Make page header alignment consistent with widget page header alignment
-.universal-wrapper h1 {
+// Keep archive/list page headers and landing-page section headers consistent.
+.universal-wrapper > h1,
+.section-heading > h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.25;
   text-align: center;
+}
+
+/* Keep navigation typography at the previous large type scale. */
+.navbar,
+.navbar .dropdown-menu {
+  font-size: 16.17px;
 }
 
 // Center the CTA shortcode button
@@ -27,8 +38,6 @@
 
 // Section titles: centered with a short accent bar underneath
 .home-section .section-heading h1 {
-  text-align: center;
-
   &::after {
     content: '';
     display: block;
@@ -140,14 +149,25 @@
   font-weight: 600;
 }
 
-// Homepage news: lay the cards out as a responsive 2-column grid
+// Homepage news: three columns on desktop, two on tablet, one on mobile
 #news .col-12:not(.section-heading) {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+
+  padding-inline: clamp(1rem, 4vw, 5rem);
 
   .card-simple {
     margin-top: 0;
+  }
+
+  // Keep each news image's intrinsic aspect ratio instead of cropping it to
+  // the theme's fixed article-banner height.
+  .article-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .see-all {
@@ -157,8 +177,77 @@
   }
 }
 
+/* News 归档页 */
+.news-list-page .page-body {
+  background: #f5f8ff;
+  padding-bottom: 4rem;
+}
+
+.news-list-page .page-body > .universal-wrapper.pt-3 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 1.5rem;
+}
+
+.news-list-page .universal-wrapper h1 {
+  margin: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+    background: #0f62fe;
+  }
+}
+
+.news-list-page .page-body > .universal-wrapper:not(.pt-3) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+}
+
+.news-list-page .media.stream-item.view-compact {
+  align-items: center;
+  min-height: 150px;
+  margin: 0;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(15, 98, 254, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(16, 36, 94, 0.06);
+}
+
+.news-list-page .media.stream-item.view-compact .article-title {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.news-list-page .media.stream-item.view-compact .article-title > a {
+  font-weight: 600;
+}
+
+.news-list-page .summary-link {
+  display: none;
+}
+
+.news-list-page .media.stream-item.view-compact > .ml-3 {
+  flex: 0 0 150px;
+  margin-left: 1.25rem !important;
+}
+
+.news-list-page .media.stream-item.view-compact img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 @media (max-width: 767.98px) {
-  #news .col-12:not(.section-heading) {
+  .news-list-page .page-body > .universal-wrapper:not(.pt-3) {
     grid-template-columns: 1fr;
   }
 }
@@ -181,6 +270,7 @@
 /* ── Features (research areas) ───────────────────────────── */
 
 .wg-features {
+
   // Fixed-height flex box keeps the three column headings aligned
   // even when individual icons render at different sizes
   .featurette-icon {
@@ -218,13 +308,60 @@
   }
 }
 
+/* ── People ──────────────────────────────────────────────── */
+
+// The rest of the site uses the medium (18px) type scale. Keep the People
+// block at its previous large (21px) visual scale without enlarging avatars,
+// spacing, or unrelated sections on the page.
+.wg-people {
+  .people-widget {
+    font-size: 0.9333rem;
+  }
+
+  // Tighten the name/role/social stack, then restore the same amount below
+  // each person so wrapped avatar rows keep their existing vertical rhythm.
+  .people-person {
+    padding-bottom: 12px;
+  }
+
+  .section-heading p {
+    font-size: 1.2833rem;
+  }
+
+  .people-widget>.col-md-12>h2 {
+    font-size: 1.75rem;
+  }
+
+  .portrait-title h2 {
+    font-size: 1.1667rem;
+    margin-bottom: 4px;
+  }
+
+  .portrait-title h3 {
+    font-size: 0.8167rem;
+    margin-bottom: 4px;
+  }
+
+  .big-icon {
+    font-size: 2.3333rem;
+  }
+
+  .people-chip .chip-name {
+    font-size: 1.05rem;
+  }
+
+  .people-chip .chip-dest {
+    font-size: 0.84rem;
+  }
+}
+
 /* ── People: compact alumni name chips ───────────────────── */
 
 .people-compact {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;  // don't stretch single-line chips to match two-line ones
+  align-items: flex-start; // don't stretch single-line chips to match two-line ones
   gap: 0.6rem;
   max-width: 1000px;
   margin-left: auto;
@@ -265,8 +402,13 @@
 .dark .people-chip {
   background: rgba(120, 169, 255, 0.14);
 
-  .chip-name { color: #a6c8ff; }
-  .chip-dest { color: #9aa7b8; }
+  .chip-name {
+    color: #a6c8ff;
+  }
+
+  .chip-dest {
+    color: #9aa7b8;
+  }
 
   &:hover {
     background: rgba(120, 169, 255, 0.22);
@@ -276,6 +418,6 @@
 // Fewer chips per row on narrow screens
 @media (max-width: 767.98px) {
   .people-chip {
-    flex: 0 0 calc((100% - 0.6rem) / 2);  // 2 per row
+    flex: 0 0 calc((100% - 0.6rem) / 2); // 2 per row
   }
 }

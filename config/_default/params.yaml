@@ -8,8 +8,8 @@
 appearance:
   theme_day: fastfire
   theme_night: fastfire
-  font: native
-  font_size: L
+  font: poppins
+  font_size: M
 
 # SEO
 

@@ -1,0 +1,11 @@
+# Poppins for Latin text, with the browser's sans-serif fallback for glyphs
+# that Poppins does not provide (including Chinese characters).
+name = "Poppins"
+
+# Load every weight used by the site to avoid synthetic bold rendering.
+google_fonts = "family=Poppins:wght@400;500;600;700;800"
+
+heading_font = "Poppins"
+body_font = "Poppins"
+nav_font = "Poppins"
+mono_font = ""
