@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Join Us
 date: 2022-10-24
 
 type: landing
@@ -7,9 +7,9 @@ type: landing
 sections:
   - block: contact
     content:
-      title: Contact
+      title: Join Us
       text:
-        We are constantly enrolling highly motivated students/engineers both in our research lab and spin-off company. If you are interested, please send your resume and personal statement to the email address.      
+        We welcome motivated students and engineers to join our research lab or spin-off company. If you are interested, please send us your résumé and a brief personal statement.
       email: FASTFIRE_admin@163.com
       address:
         street: No.819, Xisaishan Road
@@ -36,6 +36,9 @@ sections:
       #    captcha: false
     design:
       columns: '1'
+      css_class: contact-page-overview
+      spacing:
+        padding: ['64px', '0', '48px', '0']
 
   - block: markdown
     content:
@@ -46,7 +49,7 @@ sections:
       columns: '1'
       background:
         image: 
-          filename: contact.jpg
+          filename: coders.jpg
           filters:
             brightness: 1
           parallax: false
@@ -54,6 +57,6 @@ sections:
           size: cover
           text_color_light: true
       spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+        padding: ['0', '0', '0', '0']
+      css_class: contact-photo-section
 ---

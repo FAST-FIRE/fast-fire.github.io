@@ -16,7 +16,8 @@ superuser: false
 role: Master
 
 # Graduation destination (shown under the name in the Alumni list)
-graduation_destination: "Ph.D. @ HKU"
+graduation_destination: "Ph.D. @ Hong Kong University"
+alumni_level: Master
 
 # Organizations/Affiliations
 organizations:

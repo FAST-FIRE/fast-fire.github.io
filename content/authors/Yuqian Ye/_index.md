@@ -19,6 +19,7 @@ role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
 graduation_destination: "Master @ Stanford University"
+alumni_level: Undergraduate
 
 # Organizations/Affiliations
 organizations:
@@ -64,5 +65,4 @@ user_groups:
 ---
 
 Yuqian Ye is a graduate student in mechanical engineering at Stanford University. She is currently a member of the Biomimetics and Dextrous Manipulation Lab, where she works on developing soft sensing gloves based on FBG sensor for tactile and motion sensing. During her undergraduate studies, she worked in the FAST-FIRE group, focusing on the design and control of transformable aerial-ground robots.
-
 

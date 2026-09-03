@@ -1,0 +1,11 @@
+# Inter for Latin text and Noto Sans SC for Chinese text.
+name = "Inter + Noto Sans SC"
+
+# Load the weights used throughout the site and swap in immediately while
+# the web fonts download.
+google_fonts = "family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800"
+
+heading_font = "Inter"
+body_font = "Inter"
+nav_font = "Inter"
+mono_font = ""

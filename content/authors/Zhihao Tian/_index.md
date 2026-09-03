@@ -18,11 +18,12 @@ superuser: false
 role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
-graduation_destination: "Mphil @ HKUST (GZ)"
+graduation_destination: "Mphil @ The Hong Kong University of Science and Technology (Guangzhou)"
+alumni_level: Undergraduate
 
 # Organizations/Affiliations
 organizations:
-  - name: Hong Kong University of Science and Technology (Guangzhou)
+  - name: The Hong Kong University of Science and Technology (Guangzhou)
 
 # Short bio (displayed in user profile at end of posts)
 bio: Please visit my website:https://hazintihoa.github.io/
@@ -35,7 +36,7 @@ interests:
 education:
   courses:
     - course: Mphil in Artificial Intelligence
-      institution: Hong Kong University of Science and Technology (Guangzhou)
+      institution: The Hong Kong University of Science and Technology (Guangzhou)
       year: 2028
     - course: B.ENG. iN MECHANiCAL AND ELECTRONiC ENGiNEERiNG
       institution: Nanjing institute of Technology

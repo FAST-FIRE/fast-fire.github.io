@@ -8,7 +8,7 @@
 appearance:
   theme_day: fastfire
   theme_night: fastfire
-  font: poppins
+  font: inter_noto
   font_size: M
 
 # SEO
@@ -39,7 +39,7 @@ header:
     show_language: false
     show_day_night: true
     show_search: true
-    highlight_active_link: false
+    highlight_active_link: true
 
 # Site footer
 

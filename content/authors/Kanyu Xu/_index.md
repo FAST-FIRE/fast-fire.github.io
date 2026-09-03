@@ -18,6 +18,7 @@ superuser: false
 role: Alumni
 
 graduation_destination: "Master @ Nanjing University"
+alumni_level: Undergraduate
 
 # Organizations/Affiliations
 organizations:

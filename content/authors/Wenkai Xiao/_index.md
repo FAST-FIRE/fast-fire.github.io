@@ -15,6 +15,7 @@ role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
 graduation_destination: "Hangzhou Xiaoshan International Airport"
+alumni_level: Master
 
 # Organizations/Affiliations
 organizations:

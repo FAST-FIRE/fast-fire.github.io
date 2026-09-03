@@ -19,6 +19,7 @@ role: Master
 
 # Graduation destination (shown under the name in the Alumni list)
 graduation_destination: "DJI"
+alumni_level: Master
 
 # Organizations/Affiliations
 organizations:

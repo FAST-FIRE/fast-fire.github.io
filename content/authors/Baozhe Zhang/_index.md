@@ -14,7 +14,8 @@ superuser: false
 role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
-graduation_destination: "Ph.D. @ CUHK-SZ"
+graduation_destination: "Ph.D. @ The Chinese University of Hong Kong, Shenzhen"
+alumni_level: Undergraduate
 
 # Organizations/Affiliations
 organizations:

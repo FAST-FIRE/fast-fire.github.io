@@ -4,13 +4,16 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
+  - name: Home
+    url: /
+    weight: 10
   # - name: Spotlight
   #   url: spotlight
-  #   weight: 10
+  #   weight: 15
   - name: News
     url: post
     weight: 20
-  - name: People
+  - name: About Us
     url: people
     weight: 30
   - name: Research
@@ -19,6 +22,9 @@ main:
   - name: Publications
     url: publication
     weight: 50
+  - name: Join Us
+    url: contact
+    weight: 60
   # - name: Robots
   #   url: robots
-  #   weight: 60
+  #   weight: 70

@@ -19,6 +19,7 @@ role: Research Assistant
 
 # Graduation destination (shown under the name in the Alumni list)
 graduation_destination: "Ph.D. @ Xi’an Jiaotong-Liverpool University"
+alumni_level: Master
 # Organizations/Affiliations
 organizations:
   - name: Xi'an Jiaotong-Liverpool University

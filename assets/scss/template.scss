@@ -8,10 +8,30 @@
     tint         #f5f8ff
 */
 
+$fastfire-font-sans: "Inter", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+
+// One bilingual font stack across body copy, headings, navigation, and forms.
+body,
+button,
+input,
+optgroup,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.navbar .dropdown-menu {
+  font-family: $fastfire-font-sans;
+}
+
 // Keep archive/list page headers and landing-page section headers consistent.
 .universal-wrapper > h1,
 .section-heading > h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: $fastfire-font-sans;
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 1.25;
@@ -22,6 +42,44 @@
 .navbar,
 .navbar .dropdown-menu {
   font-size: 16.17px;
+}
+
+// Make the visitor's current section visible in the main navigation.
+.navbar .navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.18s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0.2rem;
+    left: 50%;
+    height: 2px;
+    border-radius: 999px;
+    background: #0f62fe;
+    transition: right 0.18s ease, left 0.18s ease;
+  }
+
+  &.active {
+    color: #0f62fe !important;
+    font-weight: 600 !important;
+
+    &::after {
+      right: 0.75rem;
+      left: 0.75rem;
+    }
+  }
+}
+
+.dark .navbar .navbar-nav .nav-link {
+  &::after {
+    background: #78a9ff;
+  }
+
+  &.active {
+    color: #a6c8ff !important;
+  }
 }
 
 // Center the CTA shortcode button
@@ -89,6 +147,24 @@
   }
 }
 
+#hero .hero-lead {
+  margin-top: 1.6rem !important;
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+// Keep the recruitment sentence on one line when the desktop banner has room.
+.join-us-banner .hero-lead {
+  max-width: none;
+}
+
+@media (min-width: 992px) {
+  .join-us-banner .hero-lead {
+    white-space: nowrap;
+  }
+}
+
 // Overlay text on the Join Us photo banner
 .home-section.dark .section-heading h1,
 .home-section.dark p {
@@ -122,11 +198,65 @@
   }
 }
 
-// Justify the "Who We Are" mission statement.
-// The markdown block renders its text inline inside .col-12 (no <p> wrapper).
-#about .col-12:not(.section-heading),
-#about p {
-  text-align: justify;
+// About Us introduction: keep the copy readable instead of stretching it
+// across the full viewport.
+#about.about-intro {
+  background: #fff;
+
+  .container {
+    max-width: 1120px;
+  }
+
+  .section-heading {
+    margin-bottom: 1.75rem !important;
+  }
+
+  .col-12:not(.section-heading) {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    color: #485568;
+    border: 1px solid #e5ebf5;
+    border-radius: 18px;
+    background: #f8fafd;
+    box-shadow: 0 12px 34px rgba(31, 54, 95, 0.065);
+    line-height: 1.78;
+    text-align: left;
+    font-size: 0.9rem;
+    p {
+      margin-bottom: 1rem;
+
+      &:first-child {
+        color: #2f3b4c;
+        font-size: inherit;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    strong {
+      color: #25344a;
+      font-weight: 600;
+    }
+  }
+}
+
+.dark #about.about-intro {
+  background: #141820;
+
+  .col-12:not(.section-heading) {
+    color: #b6c2d1;
+    border-color: #2a3443;
+    background: #1a202a;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+
+    p:first-child,
+    strong {
+      color: #e0e7f0;
+    }
+  }
 }
 
 /* ── Cards (news collection and other card views) ────────── */
@@ -150,6 +280,14 @@
 }
 
 // Homepage news: three columns on desktop, two on tablet, one on mobile
+#news {
+  background: #fff;
+}
+
+.dark #news {
+  background: #141820;
+}
+
 #news .col-12:not(.section-heading) {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -314,6 +452,12 @@
 // block at its previous large (21px) visual scale without enlarging avatars,
 // spacing, or unrelated sections on the page.
 .wg-people {
+  background: #f4f7fc;
+
+  >.container {
+    max-width: 1180px;
+  }
+
   .people-widget {
     font-size: 0.9333rem;
   }
@@ -333,7 +477,7 @@
       display: flex;
       align-items: center;
       gap: 1.25rem;
-      max-width: 1200px;
+      max-width: 1040px;
       margin: 0 auto 1.5rem !important;
       font-weight: 500;
 
@@ -364,12 +508,12 @@
     gap: 2rem;
     flex: 0 0 auto;
     width: calc(100% - 2rem);
-    max-width: 1200px;
+    max-width: 1040px;
     margin: 1rem auto 1.5rem;
     padding: 1.75rem 2rem;
     text-align: left;
-    background: #f5f8ff;
-    border: 1px solid rgba(15, 98, 254, 0.1);
+    background: #fff;
+    border: 1px solid rgba(15, 98, 254, 0.12);
     border-radius: 18px;
     box-shadow: 0 6px 24px rgba(16, 36, 94, 0.08);
 
@@ -474,6 +618,8 @@
 }
 
 .dark .wg-people {
+  background: #171c25;
+
   .people-group-heading>h2 {
     &::before,
     &::after {
@@ -482,7 +628,7 @@
   }
 
   .people-person--principal-investigator {
-    background: rgba(120, 169, 255, 0.1);
+    background: #1c222d;
     border-color: rgba(120, 169, 255, 0.18);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
 
@@ -528,6 +674,78 @@
   margin-right: auto;
 }
 
+// Alumni entries often include a destination, so give them a little more
+// horizontal room without changing the compact Visitors row.
+.people-compact--alumni {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 1rem;
+  max-width: 1200px;
+}
+
+.people-compact-subgroup {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(15, 98, 254, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.people-compact-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.85rem;
+  color: #465568;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.people-compact-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7rem;
+  height: 1.35rem;
+  padding: 0 0.4rem;
+  color: #0f62fe;
+  border-radius: 999px;
+  background: #eaf2ff;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.people-compact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.people-compact-subgroup--undergraduate .people-compact-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.people-compact--alumni .people-chip {
+  width: 100%;
+  min-height: 122px;
+  padding: 0.7rem 0.85rem;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.wg-people .people-compact--alumni {
+  .chip-name {
+    font-size: 0.95rem;
+  }
+
+  .chip-dest {
+    font-size: 0.75rem;
+  }
+}
+
 .people-chip {
   display: flex;
   flex-direction: column;
@@ -535,10 +753,12 @@
   // Exactly 5 chips per row (4 gaps between them)
   flex: 0 0 calc((100% - 4 * 0.6rem) / 5);
   padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(15, 98, 254, 0.12);
   border-radius: 14px;
-  background: #EDF5FF;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(31, 54, 95, 0.045);
   line-height: 1.3;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 
   .chip-name {
     color: #0F62FE;
@@ -555,12 +775,17 @@
   }
 
   &:hover {
-    background: #dceaff;
+    border-color: rgba(15, 98, 254, 0.24);
+    background: #f4f8ff;
+    transform: translateY(-2px);
+    text-decoration: none;
   }
 }
 
 .dark .people-chip {
   background: rgba(120, 169, 255, 0.14);
+  border-color: rgba(120, 169, 255, 0.18);
+  box-shadow: none;
 
   .chip-name {
     color: #a6c8ff;
@@ -572,6 +797,229 @@
 
   &:hover {
     background: rgba(120, 169, 255, 0.22);
+  }
+}
+
+.dark .people-compact-subheading {
+  color: #9aa7b8;
+}
+
+.dark .people-compact-subgroup {
+  border-color: rgba(120, 169, 255, 0.14);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.dark .people-compact-count {
+  color: #a6c8ff;
+  background: rgba(120, 169, 255, 0.14);
+}
+
+@media (max-width: 991.98px) {
+  .people-compact--alumni {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
+  .people-compact-subgroup--undergraduate .people-compact-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── Contact page ────────────────────────────────────────── */
+
+.wg-contact {
+  &.contact-page-overview {
+    background: #fff;
+
+    .section-heading {
+      margin-bottom: 2rem !important;
+    }
+
+    .col-12:not(.section-heading) {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      align-items: center;
+      gap: clamp(1.5rem, 4vw, 3.25rem);
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 3vw, 2.25rem);
+      border: 1px solid #e3eaf7;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #f8faff 0%, #f2f6ff 100%);
+      box-shadow: 0 16px 42px rgba(31, 54, 95, 0.08);
+    }
+  }
+
+  .col-12 > p {
+    max-width: 920px;
+    margin: 0 auto 1.75rem;
+    color: #4f5d6b;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  &.contact-page-overview .col-12 > p {
+    max-width: none;
+    margin: 0;
+    padding-left: 1.15rem;
+    color: #3e4a59;
+    border-left: 3px solid #0f62fe;
+    font-size: 1rem;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .fa-ul {
+    display: grid;
+    gap: 0.7rem;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &.contact-page-overview .fa-ul {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .fa-ul > li {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.9rem;
+    min-height: 54px;
+    margin: 0;
+    padding: 0.45rem 0.8rem;
+    color: #354150;
+    border-radius: 10px;
+    background: #f7f9fc;
+    font-size: 0.94rem;
+    line-height: 1.45;
+  }
+
+  &.contact-page-overview .fa-ul > li {
+    min-height: 62px;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid rgba(219, 227, 242, 0.9);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 5px 16px rgba(31, 54, 95, 0.045);
+  }
+
+  .fa-ul .fa-li {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    color: #0f62fe;
+    border-radius: 50%;
+    background: #eaf2ff;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  #person-email,
+  #person-address {
+    display: block;
+    min-width: 0;
+  }
+
+  #person-email a {
+    color: #354150;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      color: #0f62fe;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+  }
+}
+
+.contact-photo-section {
+  width: calc(100% - 3rem);
+  max-width: 1040px;
+  height: clamp(240px, 24vw, 320px);
+  min-height: 0 !important;
+  margin: 0 auto 4rem;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid #e3eaf7;
+  border-radius: 20px;
+  box-shadow: 0 16px 42px rgba(31, 54, 95, 0.1);
+
+  .home-section-bg {
+    background-position: center 56% !important;
+  }
+}
+
+.dark .wg-contact {
+  &.contact-page-overview {
+    background: #141820;
+
+    .col-12:not(.section-heading) {
+      border-color: #2a3443;
+      background: linear-gradient(135deg, #1b222d 0%, #171d27 100%);
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
+    }
+
+    .col-12 > p {
+      color: #c3cedb;
+      border-left-color: #78a9ff;
+    }
+
+    .fa-ul > li {
+      border-color: #2b3544;
+      background: rgba(24, 30, 40, 0.92);
+    }
+  }
+
+  .col-12 > p {
+    color: #b6c2d1;
+  }
+
+  .fa-ul > li {
+    color: #d7e0ec;
+    background: #1c222d;
+  }
+
+  .fa-ul .fa-li {
+    color: #78a9ff;
+    background: rgba(120, 169, 255, 0.14);
+  }
+
+  #person-email a {
+    color: #d7e0ec;
+
+    &:hover {
+      color: #78a9ff;
+    }
+  }
+}
+
+.dark .contact-photo-section {
+  border-color: #2a3443;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 767.98px) {
+  .wg-contact.contact-page-overview {
+    .col-12:not(.section-heading) {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  .contact-photo-section {
+    width: calc(100% - 2rem);
+    height: 240px;
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
   }
 }
 
