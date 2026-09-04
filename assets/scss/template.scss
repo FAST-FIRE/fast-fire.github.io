@@ -215,11 +215,11 @@ h6,
     max-width: 1040px;
     margin: 0 auto;
     padding: clamp(1.5rem, 3vw, 2.25rem);
-    color: #485568;
-    border: 1px solid #e5ebf5;
+    color: #526070;
+    border: 1px solid #e5eaf0;
     border-radius: 18px;
-    background: #f8fafd;
-    box-shadow: 0 12px 34px rgba(31, 54, 95, 0.065);
+    background: #f7f9fc;
+    box-shadow: 0 12px 34px rgba(31, 41, 55, 0.055);
     line-height: 1.78;
     text-align: left;
     font-size: 0.9rem;
@@ -468,7 +468,7 @@ h6,
 // block at its previous large (21px) visual scale without enlarging avatars,
 // spacing, or unrelated sections on the page.
 .wg-people {
-  background: #f4f7fc;
+  background: #f7f9fc;
 
   >.container {
     max-width: 1180px;
@@ -529,9 +529,9 @@ h6,
     padding: 1.75rem 2rem;
     text-align: left;
     background: #fff;
-    border: 1px solid rgba(15, 98, 254, 0.12);
+    border: 1px solid #e3e8ef;
     border-radius: 18px;
-    box-shadow: 0 6px 24px rgba(16, 36, 94, 0.08);
+    box-shadow: 0 6px 24px rgba(31, 41, 55, 0.065);
 
     >a {
       line-height: 0;
@@ -598,7 +598,18 @@ h6,
 
   .people-person:not(.people-person--principal-investigator):hover .avatar {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(16, 36, 94, 0.16);
+    box-shadow: 0 10px 24px rgba(31, 41, 55, 0.14);
+  }
+
+  .portrait-title h2 a {
+    color: #25344a;
+    transition: color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      color: #0f62fe;
+      text-decoration: none;
+    }
   }
 
   .section-heading p {
@@ -645,7 +656,7 @@ h6,
 
   .people-person--principal-investigator {
     background: #1c222d;
-    border-color: rgba(120, 169, 255, 0.18);
+    border-color: #2c3542;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
 
     .people-person-bio {
@@ -654,6 +665,15 @@ h6,
 
     .people-person-separator {
       color: rgba(182, 194, 209, 0.6);
+    }
+  }
+
+  .portrait-title h2 a {
+    color: #e0e7f0;
+
+    &:hover,
+    &:focus {
+      color: #a6c8ff;
     }
   }
 }
@@ -694,18 +714,25 @@ h6,
 // horizontal room without changing the compact Visitors row.
 .people-compact--alumni {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  align-items: start;
+  // Match each group's width to its member count so cards stay consistently
+  // sized: Ph.D. and Master's share the first row; Undergraduate spans row two.
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-areas:
+    "phd master"
+    "undergraduate undergraduate";
+  align-items: stretch;
   gap: 1rem;
   max-width: 1200px;
 }
 
 .people-compact-subgroup {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 1rem;
-  border: 1px solid rgba(15, 98, 254, 0.1);
+  border: 1px solid #e3e8ef;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.48);
+  background: transparent;
 }
 
 .people-compact-subheading {
@@ -726,27 +753,49 @@ h6,
   min-width: 1.7rem;
   height: 1.35rem;
   padding: 0 0.4rem;
-  color: #0f62fe;
+  color: #667085;
   border-radius: 999px;
-  background: #eaf2ff;
+  background: #edf1f5;
   font-size: 0.68rem;
   font-weight: 600;
 }
 
 .people-compact-list {
   display: grid;
+  flex: 1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 0.65rem;
 }
 
 .people-compact-subgroup--undergraduate .people-compact-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.people-compact-subgroup--phd .people-compact-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.people-compact-subgroup--master .people-compact-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.people-compact-subgroup--undergraduate {
+  grid-area: undergraduate;
+}
+
+.people-compact-subgroup--master {
+  grid-area: master;
+}
+
+.people-compact-subgroup--phd {
+  grid-area: phd;
 }
 
 .people-compact--alumni .people-chip {
   width: 100%;
   min-height: 122px;
-  padding: 0.7rem 0.85rem;
+  padding: 0.65rem 0.6rem;
   justify-content: center;
   text-align: center;
   text-decoration: none;
@@ -758,7 +807,9 @@ h6,
   }
 
   .chip-dest {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    line-height: 1.22;
+    white-space: pre-line;
   }
 }
 
@@ -769,15 +820,15 @@ h6,
   // Exactly 5 chips per row (4 gaps between them)
   flex: 0 0 calc((100% - 4 * 0.6rem) / 5);
   padding: 0.4rem 0.8rem;
-  border: 1px solid rgba(15, 98, 254, 0.12);
+  border: 1px solid #e3e8ef;
   border-radius: 14px;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(31, 54, 95, 0.045);
+  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.04);
   line-height: 1.3;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 
   .chip-name {
-    color: #0F62FE;
+    color: #25344a;
     font-size: 0.9rem;
     font-weight: 600;
   }
@@ -791,20 +842,24 @@ h6,
   }
 
   &:hover {
-    border-color: rgba(15, 98, 254, 0.24);
-    background: #f4f8ff;
+    border-color: #cbd5e1;
+    background: #fff;
     transform: translateY(-2px);
     text-decoration: none;
+
+    .chip-name {
+      color: #0f62fe;
+    }
   }
 }
 
 .dark .people-chip {
-  background: rgba(120, 169, 255, 0.14);
-  border-color: rgba(120, 169, 255, 0.18);
+  background: #1c222d;
+  border-color: #2c3542;
   box-shadow: none;
 
   .chip-name {
-    color: #a6c8ff;
+    color: #e0e7f0;
   }
 
   .chip-dest {
@@ -812,7 +867,12 @@ h6,
   }
 
   &:hover {
-    background: rgba(120, 169, 255, 0.22);
+    border-color: #465568;
+    background: #202733;
+
+    .chip-name {
+      color: #a6c8ff;
+    }
   }
 }
 
@@ -821,22 +881,27 @@ h6,
 }
 
 .dark .people-compact-subgroup {
-  border-color: rgba(120, 169, 255, 0.14);
-  background: rgba(255, 255, 255, 0.025);
+  border-color: #2c3542;
+  background: transparent;
 }
 
 .dark .people-compact-count {
-  color: #a6c8ff;
-  background: rgba(120, 169, 255, 0.14);
+  color: #aeb9c7;
+  background: #252d39;
 }
 
 @media (max-width: 991.98px) {
   .people-compact--alumni {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "phd"
+      "master"
+      "undergraduate";
     max-width: 640px;
   }
 
-  .people-compact-subgroup--undergraduate .people-compact-list {
+  .people-compact-subgroup--undergraduate .people-compact-list,
+  .people-compact-subgroup--master .people-compact-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

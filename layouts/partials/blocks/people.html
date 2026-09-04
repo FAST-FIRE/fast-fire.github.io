@@ -52,7 +52,7 @@
       {{/* Compact name-chip row: no photos, no role, no social. */}}
       <div class="col-12 mb-4 people-compact people-compact--{{ $group_class }}">
         {{ if eq $group_class "alumni" }}
-          {{ $alumni_subgroups := slice (dict "key" "Undergraduate" "label" "Undergraduate") (dict "key" "Master" "label" "Master's") }}
+          {{ $alumni_subgroups := slice (dict "key" "Ph.D." "label" "Ph.D.") (dict "key" "Master" "label" "Master's") (dict "key" "Undergraduate" "label" "Undergraduate") }}
           {{ range $alumni_subgroups }}
             {{ $level := .key }}
             {{ $members := where $query ".Params.alumni_level" $level }}

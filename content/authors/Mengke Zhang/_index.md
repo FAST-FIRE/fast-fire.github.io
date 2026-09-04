@@ -15,7 +15,11 @@ authors:
 superuser: false
 
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
-role: Ph.D. student
+role: Alumni
+
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Horizon Robotics\n(地平线)"
+alumni_level: Ph.D.
 
 # Organizations/Affiliations
 organizations:
@@ -47,8 +51,8 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
 
 ---
 
-张孟轲 is a Ph.D. candidate of robotics at the Fast Lab. His research interests include Robotics and Trajectory Optimization.
+张孟轲 received his Ph.D. in robotics from Zhejiang University, where he was a member of the Fast Lab. He is now with Horizon Robotics (地平线). His research interests include robotics and trajectory optimization.

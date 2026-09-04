@@ -1,11 +1,11 @@
 ---
 # Display name
-title: Jiadong Lu
-display_name: Jiadong Lu 卢家栋
+title: Zhenan Fu
+display_name: Zhenan Fu 傅哲楠
 
 # Full Name (for SEO)
-first_name: Jiadong
-last_name: Lu
+first_name: Zhenan
+last_name: Fu
 
 # Is this the primary user of the site?
 superuser: false
@@ -19,19 +19,18 @@ organizations:
     url: 'https://www.zju.edu.cn/english/'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests focuse on key challenges in multi-robot systems, such as collaborative localization, perception, communication, and system organization.
+bio: My research interests focuse on key challenges in multi-robot systems, such as multi-robot collaboration and system organization.
 
 interests:
   - Multi-robot Systems
-  - Localization and State Estimation
-  - Novel Robot Platforms
+  - Quadrotor Control
 
 education:
   courses:
-    - course: MEng in Automation
+    - course: MEng in Electronic Information
       institution: Zhejiang University
     - course: BEng in Automation
-      institution: Shandong University
+      institution: Wuhan University of Technology
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -40,13 +39,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'jdlu@zju.edu.cn'
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.com/citations?hl=zh-CN&user=KXK4KjMAAAAJ
-  - icon: github
-    icon_pack: fab
-    link: https://jdluuu.github.io/
+    link: '22532153@zju.edu.cn'
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -54,7 +47,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: 'jdlu@zju.edu.cn'
+email: '22532153@zju.edu.cn'
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -65,6 +58,6 @@ user_groups:
   - Grad Students
 ---
 
-Hi! I am currently pursuing a master's degree in the [FastLab](http://zju-fast.com/) (Fire Group) at the College of Control Science and Engineering, Zhejiang University, under the supervision of [Yanjun Cao](http://zju-fast.com/research-group/yanjun-cao/) and [Chao Xu](http://zju-fast.com/research-group/chao-xu/).
+My name is Zhenan Fu. I am currently pursuing a master's degree in the [FastLab](http://zju-fast.com/) (Fire Group) at the College of Control Science and Engineering, Zhejiang University, under the supervision of [Yanjun Cao](http://zju-fast.com/research-group/yanjun-cao/).
 
-Previously, I obtained a bachelor's degree in Automation from Shandong University.
+Previously, I obtained a bachelor's degree in Automation from Wuhan University of Technology.

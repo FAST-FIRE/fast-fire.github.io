@@ -15,7 +15,7 @@ authors:
 superuser: false
 
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
-role: Master
+role: Ph.D. student
 
 # Organizations/Affiliations
 organizations:

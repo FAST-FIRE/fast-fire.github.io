@@ -4,8 +4,8 @@ title: Qiuyu Ren
 display_name: Qiuyu Ren 任秋予
 
 # Full name (for SEO)
-first_name: Mengke
-last_name: Zhang
+first_name: Qiuyu
+last_name: Ren
 
 # Username (this should match the folder name)
 authors:
@@ -15,7 +15,11 @@ authors:
 superuser: false
 
 # Role/position: Graduate Student/ Research Intern/ Engineer/ Postdoc Researcher
-role: Ph.D. student
+role: Alumni
+
+# Graduation destination (shown under the name in the Alumni list)
+graduation_destination: "Differential Robotics (微分智飞)"
+alumni_level: Ph.D.
 
 # Organizations/Affiliations
 organizations:
@@ -47,14 +51,8 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
 
 ---
 
-Qiuyu Ren received the B.Eng. degree in Automa-
-tion from the College of Electrical Engineering at
-Zhejiang University, China, in 2021. He is currently
-pursuing his Ph.D. in Electronic Information at the
-College of Control Science and Engineering, Zhe-
-jiang University. His research interests include UAV
-tracking, motion planning and Model Predictive Control (MPC).
+Qiuyu Ren received the B.Eng. degree in Automation from the College of Electrical Engineering at Zhejiang University, China, in 2021, and the Ph.D. degree in Electronic Information from the College of Control Science and Engineering at Zhejiang University. He is now with Differential Robotics (微分智飞). His research interests include UAV tracking, motion planning, and Model Predictive Control (MPC).
