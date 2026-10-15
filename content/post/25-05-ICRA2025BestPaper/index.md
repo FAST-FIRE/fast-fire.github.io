@@ -1,11 +1,11 @@
 ---
-title: Mingwei Lai and Yuqian Ye Win the Best Paper Award Finalist at ICRA 2025
+title: "Congratulations to Mingwei Lai and Yuqian Ye: Best Paper Award finalist at ICRA 2025"
 date: 2025-05-19
 image:
   focal_point: 'top'
 ---
 
-Congratulations to Mingwei Lai and Yuqian Ye for winning the Best Paper Award Finalist at 2025 IEEE International Conference on Robotics and Automation for their novel design of “TrofyBot”.
+Congratulations to Mingwei Lai and Yuqian Ye on being named Best Paper Award finalists at the 2025 IEEE International Conference on Robotics and Automation (ICRA 2025) for their novel design of “TrofyBot”.
 
 <!--more-->
 

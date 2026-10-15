@@ -7,7 +7,7 @@ image:
 tags: [PaperAccepted]
 ---
 
-Congrats to Zhenyu Hou — our IROS 2025 paper was accepted for an **oral presentation**.
+Congratulations to Zhenyu Hou on the acceptance of the IROS 2025 paper for an **oral presentation**.
 
 <!--more-->
 

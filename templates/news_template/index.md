@@ -1,5 +1,13 @@
 ---
-title: Mingwei Lai and Yuqian Ye Win the Best Paper Award Finalist at ICRA 2025
+# News title style: sentence case; venue abbreviation + space + four-digit year.
+# Paper acceptance: "Congratulations to NAME: RA-L 2026 paper accepted"
+# Oral presentation: "Congratulations to NAME: IROS 2026 paper accepted for oral presentation"
+# Publication: "Congratulations to NAME: IET CSR 2026 paper published"
+# Use venue abbreviations in titles (RA-L, T-Mech, IET CSR, ICRA, IROS).
+# Put full venue names and paper titles in the body; preserve accepted/published status.
+# Awards: "Congratulations to NAME: AWARD recipient/finalist at VENUE YEAR"
+# Events: "GROUP at VENUE YEAR" or "NAMES present posters at VENUE YEAR"
+title: "Congratulations to Mingwei Lai and Yuqian Ye: Best Paper Award finalist at ICRA 2025"
 date: 2025-05-19
 image:
   focal_point: 'top'
@@ -8,7 +16,7 @@ image:
 tags: [Awards]
 ---
 
-Congratulations to Mingwei Lai and Yuqian Ye for winning the Best Paper Award Finalist at 2025 IEEE International Conference on Robotics and Automation for their novel design of “TrofyBot”.
+Congratulations to Mingwei Lai and Yuqian Ye on being named Best Paper Award finalists at the 2025 IEEE International Conference on Robotics and Automation (ICRA 2025) for their novel design of “TrofyBot”.
 
 <!--more-->
 

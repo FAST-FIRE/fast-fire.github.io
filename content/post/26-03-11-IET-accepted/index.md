@@ -1,5 +1,5 @@
 ---
-title: "Congratulations to Ge Wan that the IET is published"
+title: "Congratulations to Ge Wan: IET CSR 2026 paper published"
 subtitle: 
 date: 2026-03-11
 image:
@@ -10,7 +10,7 @@ tags: [PaperAccepted]
 
 ---
 
-Congratulations to Ge Wan that the IET is published.
+Congratulations to Ge Wan on the publication of the paper in IET Cyber-Systems and Robotics (IET CSR).
 
 <!--more-->
 

@@ -1,12 +1,12 @@
 ---
-title: "Congratulations to Xiangyu Li: T-Mech 2026 paper accepted for publication"
+title: "Congratulations to Xiangyu Li: T-Mech 2026 paper accepted"
 date: 2026-10-14
 image:
   focal_point: 'Smart'
 tags: [PaperAccepted]
 ---
 
-Congratulations to Xiangyu Li on the acceptance of the T-Mech 2026 paper for publication.
+Congratulations to Xiangyu Li on the acceptance of the T-Mech 2026 paper.
 
 <!--more-->
 

@@ -1,5 +1,5 @@
 ---
-title: "Congratulations to Jiajun Yu and Nanhe Chen that the RA-L'2025 is accepted"
+title: "Congratulations to Jiajun Yu and Nanhe Chen: RA-L 2025 paper accepted"
 subtitle: 
 date: 2025-10-15
 image:
@@ -10,7 +10,7 @@ tags: [PaperAccepted]
 
 ---
 
-Congratulations to Jiajun Yu and Nanhe Chen that the RA-L' 2025 is accepted.
+Congratulations to Jiajun Yu and Nanhe Chen on the acceptance of the RA-L 2025 paper.
 
 <!--more-->
 

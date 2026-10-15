@@ -1,12 +1,12 @@
 ---
-title: "Congratulations to Xingpeng Wang: RA-L'2026 paper accepted"
+title: "Congratulations to Xingpeng Wang: RA-L 2026 paper accepted"
 date: 2026-10-14
 image:
   focal_point: 'Smart'
 tags: [PaperAccepted]
 ---
 
-Congratulations to Xingpeng Wang on the acceptance of the RA-L paper.
+Congratulations to Xingpeng Wang on the acceptance of the RA-L 2026 paper.
 
 <!--more-->
 

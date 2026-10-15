@@ -1,5 +1,5 @@
 ---
-title: "Mengke Zhang and Jiajun Yu participate in ICRA2026 and present posters"
+title: "Mengke Zhang and Jiajun Yu present posters at ICRA 2026"
 subtitle:
 date: 2026-06-03
 image:

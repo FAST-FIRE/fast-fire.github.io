@@ -1,5 +1,5 @@
 ---
-title: "FAST-FIRE@IROS2025"
+title: "FAST-FIRE at IROS 2025"
 subtitle:
 date: 2025-10-29
 image:

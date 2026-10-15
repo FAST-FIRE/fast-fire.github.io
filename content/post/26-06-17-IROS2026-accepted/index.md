@@ -7,7 +7,7 @@ image:
 tags: [PaperAccepted]
 ---
 
-Congrats to Juncheng Chen — our IROS 2026 paper was accepted for an **oral presentation**.
+Congratulations to Juncheng Chen on the acceptance of the IROS 2026 paper for an **oral presentation**.
 
 <!--more-->
 

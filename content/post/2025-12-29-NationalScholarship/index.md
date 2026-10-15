@@ -1,5 +1,5 @@
 ---
-title: "Congratulations to Nanhe Chen on being awarded the National Scholarship!"
+title: "Congratulations to Nanhe Chen: National Scholarship recipient"
 subtitle:
 date: 2025-12-29
 image:
